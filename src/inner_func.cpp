@@ -1,3 +1,5 @@
+#include <iostream>
+
 extern "C" {
 #include "../include/inner_func.h"
 
