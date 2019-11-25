@@ -1,7 +1,7 @@
 defmodule StreamFunc do
     @on_load :load_nifs
     def load_nifs do
-        :erlang.load_nif('../lib/stream',0)
+        :erlang.load_nif('../nif_lib/stream',0)
     end
 
     def stream_func do

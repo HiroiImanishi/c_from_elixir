@@ -1,2 +1,2 @@
 
-int calc(int a,int b);
+int calc(int,int);

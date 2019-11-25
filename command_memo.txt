@@ -1,0 +1,8 @@
+$ gcc -shared -fPIC -o ../lib/libcalc.so calc.c ->共有ライブラリ作る
+$ export LD_LIBRARY_PATH=<読み込みたい.soがあるディレクトリ>
+これをしないと、elixirでロードするときにlibcalc.soが開けないと言われる。
+
+$ cd ../nif_src/ && gcc -O3 -fpic -shared -L ../lib -o ../nif_lib/hello.so hello_nif.c ../src/hello.c -I /usr/lib/erlang/erts-10.4.4/include -lcalc
+-L はソースファイルの前に記しておく
+$ cd ../elixir_src && elixirc hello.ex
+$ iex 

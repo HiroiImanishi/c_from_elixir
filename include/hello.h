@@ -1,1 +1,1 @@
-int hello(int times);
+int hello(int);
